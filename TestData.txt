@@ -1,0 +1,93 @@
+
+------ Single -----
+
+ ---contains ----
+{
+  "filters": 
+  [
+
+  { "propertyName":"Name", "Operator": 1, "propertyValue": "john" }
+   
+ ]
+
+}
+
+ ---equals ----
+
+{
+  "filters": 
+  [
+
+  { "propertyName":"job", "Operator": 1, "propertyValue": "Software Developer" }
+   
+ ]
+
+}
+
+
+ ---greater than----
+
+{
+  "filters": 
+  [
+
+   { "propertyName":"orders", "Operator": 2, "propertyValue": "1" }
+
+   
+ ]
+
+}
+
+
+---less than----
+
+{
+  "filters": 
+  [
+
+   { "propertyName":"dateOfBirth", "Operator": 3, "propertyValue": "1985-05-15" }
+
+   
+ ]
+
+}
+
+
+---grater than  TotalAmount----
+
+{
+  "filters": 
+  [
+
+   { "propertyName":"orders.totalamount", "Operator": 2, "propertyValue": "200" }
+
+   
+ ]
+
+}
+
+
+
+------ Combined -----
+
+{
+   "filters": 
+       [
+
+	{ "propertyName":"Name", "Operator": 1, "propertyValue": "smith", "nextLogicalOperator":0 },
+	{ "propertyName":"job", "Operator": 1, "propertyValue": "Graphic" }
+
+       ]
+}
+
+-----------------------
+
+{
+     "filters": 
+     [
+
+	{ "propertyName":"Name", "Operator": 1, "propertyValue": "john", "nextLogicalOperator":1 },
+	{ "propertyName":"Name", "Operator": 0, "propertyValue": "Jane Smith" }
+     ]
+
+}
